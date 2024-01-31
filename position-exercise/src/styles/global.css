@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+    --light-gray: #f7f7f7;
+    --dark-gray: #c6c6c6;
+    --red: #e21;
+
+    /* Typography */
+    --font-family: Arial, Helvetica, sans-serif;
+    --paragraph: 20px;
+    --advantages-bikcraft: 64px;
+
+    /* Sizes */
+    --max-width: 1000px
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background: var(--light-gray);
+    display: grid;
+    gap: 60px;
+    justify-items: center;
+}
