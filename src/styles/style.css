@@ -1,0 +1,127 @@
+:root {
+    /* Colors */
+    --light-gray: #f7f7f7;
+    --dark-gray: #c6c6c6;
+    --red: #e21;
+
+    /* Typography */
+    --font-family: Arial, Helvetica, sans-serif;
+    --paragraph: 20px;
+    --subtitle: 64px;
+
+    /* Sizes */
+    --max-width: 1000px
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background: var(--light-gray);
+    display: grid;
+    gap: 60px;
+    justify-items: center;
+    margin-top: 60px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, h1, h2, h3 {
+    margin: 0px;
+}
+
+p {
+    font-size: var(--paragraph);
+    line-height: 1.3;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 4px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--max-width);
+}
+
+.introduction {
+    display: grid;
+    align-content: center;
+    gap: 20px;
+    justify-items: end;
+    background: #fff;
+    padding: 40px;
+    text-align: right;
+    position: relative;
+}
+
+.button {
+    background: var(--red);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.detail {
+    width: 60px;
+    height: 4px;
+    background: var(--red);
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.subtitle {
+    font-size: var(--subtitle);
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.2);
+    text-align: right;
+    padding: 40px;
+    align-self: center;
+}
+
+.advantages {
+    background: #fff;
+    padding: 40px;
+}
+
+.advantages-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+}
+
+.advantages-item p {
+    grid-column: 2;
+}
+
+footer {
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
