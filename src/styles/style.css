@@ -6,8 +6,8 @@
 
     /* Typography */
     --font-family: Arial, Helvetica, sans-serif;
-    --paragraph: 20px;
-    --subtitle: 64px;
+    --paragraph: 1.25rem;
+    --subtitle: 4rem;
 
     /* Sizes */
     --max-width: 1000px
@@ -41,6 +41,12 @@ p {
 }
 
 /* Navigation Menu */
+header {
+    display: grid;
+    justify-items: center;
+    gap: 60px;
+}
+
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -52,14 +58,20 @@ nav ul {
 }
 
 nav ul li a {
+    display: block;
     background: #fff;
     padding: 15px 30px;
     border-radius: 4px;
     color: #000;
     text-transform: uppercase;
+    border: 2px solid transparent;
 }
 
-.content {
+nav ul li a:hover {
+    border-color: var(--red);
+}
+
+article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: var(--max-width);
@@ -76,6 +88,20 @@ nav ul li a {
     position: relative;
 }
 
+.introduction::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: var(--red);
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.introduction h1 {
+    font-size: 2rem;
+}
+
 .button {
     background: var(--red);
     color: #fff;
@@ -84,13 +110,8 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-.detail {
-    width: 60px;
-    height: 4px;
-    background: var(--red);
-    position: absolute;
-    top: 30px;
-    right: -30px;
+.button:hover {
+    background: #900;
 }
 
 .subtitle {
@@ -100,6 +121,7 @@ nav ul li a {
     text-align: right;
     padding: 40px;
     align-self: center;
+    background-image: url("../images/onda.svg");
 }
 
 .advantages {
@@ -112,6 +134,15 @@ nav ul li a {
     grid-template-columns: auto 1fr;
     gap: 10px 20px;
     padding: 20px;
+    border-left: 4px solid transparent;
+}
+
+.advantages-item:nth-child(odd) {
+    background-color: var(--light-gray);
+}
+
+.advantages-item:hover {
+    border-color: var(--red);
 }
 
 .advantages-item p {
